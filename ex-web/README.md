@@ -1,6 +1,6 @@
-# Container Info - Simple Nginx Image
+# ex-web
 
-Nginx 기반 컨테이너의 **IP 주소**와 **호스트명**을 웹페이지에 표시하는 간단한 Podman 이미지입니다.
+- display container's ip, hostname
 
 ---
 
@@ -20,7 +20,7 @@ podman run -d -p 8080:80 --name mycontainer ehdlaos/test:v2
 # http://localhost:8080
 ```
 
-## 3. Podman Push (Docker Hub 업로드)
+## 3. Podman Push (Docker Hub upload)
 
 ```bash
 # Docker Hub 로그인
