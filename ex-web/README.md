@@ -7,14 +7,14 @@
 ## 1. Podman Build
 
 ```bash
-podman build --no-cache -t ehdlaos/test:v2 .
+podman build --no-cache -t ehdlaos/ex-web:v1 .
 ```
 
 ## 2. Podman Run
 
 ```bash
 # 기본 실행 (포트 8080으로 접속)
-podman run -d -p 8080:80 --name mycontainer ehdlaos/test:v2
+podman run -d -p 8080:80 --name mycontainer ehdlaos/ex-web:v1
 
 # 브라우저에서 확인
 # http://localhost:8080
@@ -27,7 +27,7 @@ podman run -d -p 8080:80 --name mycontainer ehdlaos/test:v2
 podman login docker.io
 
 # 이미지 Push
-podman push ehdlaos/test:v2
+podman push ehdlaos/ex-web:v1
 ```
 
 ## 4. 기타 유용한 명령어
@@ -38,11 +38,11 @@ podman stop mycontainer
 podman rm mycontainer
 
 # 이미지 삭제
-podman rmi ehdlaos/test:v2
+podman rmi ehdlaos/ex-web:v1
 
 # 태그 변경 후 Push
-podman tag ehdlaos/test:v2 ehdlaos/test:latest
-podman push ehdlaos/test:latest
+podman tag ehdlaos/ex-web:v1 ehdlaos/ex-web:latest
+podman push ehdlaos/ex-web:latest
 ```
 
 ## 파일 구조
